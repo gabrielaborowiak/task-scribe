@@ -1,17 +1,11 @@
-//import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-//import 'package:task_scribe/auth/main_page.dart';
-//import 'package:task_scribe/firebase_options.dart';
-//import 'package:task_scribe/screen/login.dart';
+import 'package:taskscribemaster/screen/login_screen.dart';
 
-//void main() async {
- // WidgetsFlutterBinding.ensureInitialized();
- // await Firebase.initializeApp(
-  //  options: DefaultFirebaseOptions.currentPlatform,
-  //);
- // runApp(const MyApp());
-//}
+void main() {
+  runApp(const MyApp());
+}
 
+// ignore: camel_case_types
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -19,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-//      home: LoginScreen(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => const LoginScreen(),
+      },
     );
   }
 }
